@@ -39,4 +39,19 @@ public class CalculatorTest {
 		assertEquals(6, Calculator.add("1\n2,3"));
 	}
 
+	@Test
+	public void testMultipleNewLines(){
+		assertEquals(10, Calculator.add("1,2\n3\n4"));
+	}
+
+	/*@Test
+	public void testStringBeginsWithSeperateLines() {
+		assertEquals(3, Calculator.add("//1,2"));
+	}*/
+
+	@Test
+	public void testStringBeginsWithSeperateLines2() {
+		assertEquals(3, Calculator.add("//;1;2"));
+	}
+
 }	
