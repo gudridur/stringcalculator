@@ -4,7 +4,6 @@ public class Calculator {
 
 	public static int add(String text){
 
-		
 
 		if(text.equals("")){
 			return 0;
@@ -14,7 +13,7 @@ public class Calculator {
 		}
 
 		else
-			return toInt(text);
+			return sum(splitNumbers(text));
 	}
 
 	private static int toInt(String number){
