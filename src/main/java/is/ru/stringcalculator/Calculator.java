@@ -2,17 +2,14 @@ package is.ru.stringcalculator;
 
 public class Calculator {
 
-	public static int add(String text){
+	public static String delimeters = "[,\n]";
 
+	public static int add(String text){
 
 		if(text.equals("")){
 			return 0;
 		}
 
-		/*else if(text.contains("\n") {
-			return sum(splitNumbers(text));
-		}*/
-		
 		else
 			return sum(splitNumbers(text));
 	}
@@ -22,7 +19,7 @@ public class Calculator {
 	}
 
 	private static String[] splitNumbers(String numbers){
-	    return numbers.split("[,\n]");
+	    return numbers.split(delimeters);
 	}
       
     private static int sum(String[] numbers){
